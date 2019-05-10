@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <Button
+            android:text="@string/Activity"
+            android:layout_width="126dp"
+            android:layout_height="48dp"
+            android:id="@+id/buttonActivity"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/container" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/buttonFragmentA"/>
+    <Button
+            android:text="@string/Fragment_A"
+            android:layout_width="126dp"
+            android:layout_height="48"
+            android:id="@+id/buttonFragmentA"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/container"
+            app:layout_constraintStart_toEndOf="@+id/buttonActivity" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/buttonFragmentB"/>
+    <Button
+            android:text="@string/Fragment_B"
+            android:layout_width="127dp"
+            android:layout_height="48dp"
+            android:id="@+id/buttonFragmentB"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/container"
+            app:layout_constraintStart_toEndOf="@+id/buttonFragmentA" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <FrameLayout
+            android:layout_width="363dp"
+            android:layout_height="579dp"
+            android:id="@+id/container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@+id/buttonActivity"/>
+
+</FrameLayout>
+</android.support.constraint.ConstraintLayout>
